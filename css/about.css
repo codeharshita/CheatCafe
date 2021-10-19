@@ -1,0 +1,95 @@
+@import url(https://fonts.google.com/specimen/Roboto);
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: bisque;
+    background-image: url("../images/logo4-removebg-preview.png");
+    background-repeat: no-repeat;
+}
+
+.section{
+    width:100%;
+}
+.section .container{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+.container .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: tomato;
+}
+.container .title h1::after{
+    content: "";
+    height: 5px;
+    width: 100px;
+    background-color: rgb(248, 144, 9);
+    border-radius: 25px;
+    margin: auto;
+    display: block;
+}
+.content{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content .article h3{
+    margin-top: 52px;
+    color: blue;
+    font-size: 17px;
+
+}
+.content .article p{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(181, 31, 211);
+}
+.content .article .button{
+    margin-top: 50px;
+
+}
+.content .article .button a{
+    text-decoration: none;
+    padding: 8px 25px;
+    background-color: rgba(237, 240, 48, 0.267); 
+    border-radius: 40px;
+    color: brown;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+.content .article .button a:hover{
+    color: yellow;
+    background-color:violet ;
+    
+}
+@media screen and (max-width: 768px){
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+} 
+    
+
+
+

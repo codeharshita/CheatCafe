@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<link rel="stylesheet" href="css/feedback.css">
+<body>
+    <div class="container feedback-form">
+        <div class="feedback-image">
+            <img src="images/rocket-removebg-preview.png" alt="">
+        </div>
+
+        <form  action ="javascript:sendemail()" method="POST">
+            <h3>Drop Us A Feedback</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id=" number" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <p>Did you get your answer?</p>
+                        YES<input type="radio" name="1">
+                        NO<input type="radio" name="1">
+                    </div>
+                    <textarea name="txtMsg" class="form-control" id="message" placeholder="Your Message Or Suggestion"
+                        style="width: 600px;height: 150px;margin-bottom: 8px;">
+                </textarea>
+                    <div class="form-group">
+                        <input type="submit" name="btnsubmit" id="btn" class="btnFeedback" value="Send Feedback"
+                            style="outline: none;">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="TxtEmail" id="email" class="form-control" placeholder="Your Email">
+                        <p>Are you satisfied with our services?</p>
+                        Yes<input type="radio" name="2">
+                        No<input type="radio" name="2">
+                    </div>
+                    <div class="form-group">
+                        <p>What ratings you want to give us out of 10?</p>
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+                        <input type="radio" name="3">
+
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+
+
+<script>
+
+    function sendemail(){
+
+        var name = $('#name').val();
+        var btn = $('#btn').val();
+        var number = $('#number').val();
+        var message = $('#message').val();
+        var email = $('#email').val();
+
+
+    }
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "mailmeharshita24@gmail.com",
+    Password : "tanya@sri1234",
+    To : 'mailmeharshita24@gmail.com',
+    From : "mailmeharshita24@gmail.com",
+    Subject : "FeedBack Mail",
+    Body :  Body
+}).then(
+  message =>{
+      if(message =="OK"){
+          alert("Your email has been sent")
+        }else{
+            console.error (message);
+            alert('There is error in sending message. ')
+        }
+  }
+);
+</script>
+
+</html>
